@@ -15,14 +15,18 @@ public class DogBreed {
     @SerializedName("origin")
     private String origin;
 
+    @SerializedName("bred_for")
+    private String bredFor;
+
     @SerializedName("url")
     private String url;
 
-    public DogBreed(int id, String name, String lifeSpan, String origin, String url) {
+    public DogBreed(int id, String name, String lifeSpan, String origin, String bredFor, String url) {
         this.id = id;
         this.name = name;
         this.lifeSpan = lifeSpan;
         this.origin = origin;
+        this.bredFor = bredFor;
         this.url = url;
     }
 
@@ -56,6 +60,14 @@ public class DogBreed {
 
     public void setOrigin(String origin) {
         this.origin = origin;
+    }
+
+    public String getBredFor() {
+        return bredFor;
+    }
+
+    public void setBredFor(String bredFor) {
+        this.bredFor = bredFor;
     }
 
     public String getUrl() {
