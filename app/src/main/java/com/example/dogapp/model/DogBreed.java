@@ -2,9 +2,17 @@ package com.example.dogapp.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DogBreed {
+import java.io.Serializable;
+
+public class DogBreed implements Serializable {
     @SerializedName("id")
     private int id;
+
+    @SerializedName("bred_for")
+    private String bredFor;
+
+    @SerializedName("breed_group")
+    private String bredGroup;
 
     @SerializedName("name")
     private String name;
@@ -15,18 +23,28 @@ public class DogBreed {
     @SerializedName("origin")
     private String origin;
 
-    @SerializedName("bred_for")
-    private String bredFor;
+    @SerializedName("temperament")
+    private String temperament;
+
+    @SerializedName("height")
+    private Measurement height;
+
+    @SerializedName("weight")
+    private Measurement weight;
 
     @SerializedName("url")
     private String url;
 
-    public DogBreed(int id, String name, String lifeSpan, String origin, String bredFor, String url) {
+    public DogBreed(int id, String bredFor, String bredGroup, String name, String lifeSpan, String origin, String temperament, Measurement height, Measurement weight, String url) {
         this.id = id;
+        this.bredFor = bredFor;
+        this.bredGroup = bredGroup;
         this.name = name;
         this.lifeSpan = lifeSpan;
         this.origin = origin;
-        this.bredFor = bredFor;
+        this.temperament = temperament;
+        this.height = height;
+        this.weight = weight;
         this.url = url;
     }
 
@@ -36,6 +54,22 @@ public class DogBreed {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getBredFor() {
+        return bredFor;
+    }
+
+    public void setBredFor(String bredFor) {
+        this.bredFor = bredFor;
+    }
+
+    public String getBredGroup() {
+        return bredGroup;
+    }
+
+    public void setBredGroup(String bredGroup) {
+        this.bredGroup = bredGroup;
     }
 
     public String getName() {
@@ -62,12 +96,28 @@ public class DogBreed {
         this.origin = origin;
     }
 
-    public String getBredFor() {
-        return bredFor;
+    public String getTemperament() {
+        return temperament;
     }
 
-    public void setBredFor(String bredFor) {
-        this.bredFor = bredFor;
+    public void setTemperament(String temperament) {
+        this.temperament = temperament;
+    }
+
+    public Measurement getHeight() {
+        return height;
+    }
+
+    public void setHeight(Measurement height) {
+        this.height = height;
+    }
+
+    public Measurement getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Measurement weight) {
+        this.weight = weight;
     }
 
     public String getUrl() {

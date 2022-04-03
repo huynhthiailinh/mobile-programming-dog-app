@@ -62,11 +62,8 @@ public class ListFragment extends Fragment {
                 .subscribeWith(new DisposableSingleObserver<List<DogBreed>>() {
                     @Override
                     public void onSuccess(@NonNull List<DogBreed> dogBreedList) {
-                        for (DogBreed dog : dogBreedList) {
-                            Log.d("DEBUG1", dog.getName());
-                            dogBreeds.add(dog);
-                            dogsAdapter.notifyDataSetChanged();
-                        }
+                        dogBreeds.addAll(dogBreedList);
+                        dogsAdapter.notifyDataSetChanged();
                     }
 
                     @Override
