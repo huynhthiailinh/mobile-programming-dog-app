@@ -24,12 +24,15 @@ public class DetailsFragment extends Fragment {
         if (getArguments() != null) {
             dogBreed = (DogBreed) getArguments().getSerializable("dogBreed");
         }
-        binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.fragment_details, null, false);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.fragment_details,
+                null,
+                false);
         View view = binding.getRoot();
         binding.setDog(dogBreed);
         Picasso.get().load(dogBreed.getUrl()).into(binding.ivUrl);

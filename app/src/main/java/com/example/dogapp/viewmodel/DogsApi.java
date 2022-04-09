@@ -1,4 +1,4 @@
-package com.example.dogapp.view;
+package com.example.dogapp.viewmodel;
 
 import com.example.dogapp.model.DogBreed;
 

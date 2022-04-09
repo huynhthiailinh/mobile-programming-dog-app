@@ -1,7 +1,6 @@
 package com.example.dogapp.viewmodel;
 
 import com.example.dogapp.model.DogBreed;
-import com.example.dogapp.view.DogsApi;
 
 import java.util.List;
 
